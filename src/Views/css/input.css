@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    box-sizing: border-box;
+}
+body {
+    @apply bg-gray-300/10;
+}
+.container {
+    @apply max-w-[1024px] w-[80%] mx-auto  px-14 min-h-[100vh];
+}
+.button {
+    @apply bg-slate-950 text-white px-4 py-2 rounded-md w-fit;
+}
+.primary {
+    @apply bg-green-600;
+}
+input {
+    @apply w-fit p-2 border-[2px] rounded-lg border-slate-600 outline-none transition-all;
+}
+input:focus {
+    @apply border-slate-950;
+}
