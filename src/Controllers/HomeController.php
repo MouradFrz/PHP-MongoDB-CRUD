@@ -2,15 +2,28 @@
 
 namespace App\Controllers;
 
+use App\Database\Connection;
 use App\Database\NoSql;
 use App\Models\User;
 use Exception;
 use MongoDB\Client;
 use MongoDB\BSON\ObjectID;
-
+use PDO;
 
 class HomeController
 {
+    public static function test()
+    {
+        try {
+            $pdo = Connection::getConnection();
+            $stmt = $pdo->prepare('select * from carsales');
+            $stmt->execute();
+            $res = $stmt->fetchAll(PDO::FETCH_ASSOC);
+            echo json_encode($res);
+        } catch (Exception $e) {
+            echo $e->getMessage();
+        }
+    }
     public static function home()
     {
         $nsql = new NoSql();

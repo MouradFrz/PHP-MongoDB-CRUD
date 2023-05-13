@@ -6,6 +6,7 @@ $router = new Router();
 
 $router->route('/',[HomeController::class,'home']);
 $router->route('/showOne',[HomeController::class,'showOne']);
+$router->route('/test',[HomeController::class,'test']);
 $router->route('/add-form',[HomeController::class,'addPage']);
 $router->route('/add',[HomeController::class,'add']);
 $router->route('/delete',[HomeController::class,'delete']);

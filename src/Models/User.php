@@ -1,15 +1,18 @@
 <?php
 
 namespace App\Models;
+
 use App\Database\Connection;
 use PDO;
 
-class User{
+class User
+{
     private $name;
     private $phoneNumber;
     private $address;
 
-    public static function index(){
+    public static function index(): array
+    {
         $pdo = Connection::getConnection();
         $stmt = $pdo->prepare('SELECT * FROM carsales');
         $stmt->execute();
