@@ -4,14 +4,15 @@ use App\Routing\Router;
 use App\Controllers\HomeController;
 $router = new Router();
 
-$router->route('/',[HomeController::class,'home']);
-$router->route('/showOne',[HomeController::class,'showOne']);
-$router->route('/test',[HomeController::class,'test']);
-$router->route('/add-form',[HomeController::class,'addPage']);
-$router->route('/add',[HomeController::class,'add']);
-$router->route('/delete',[HomeController::class,'delete']);
-$router->route('/update',[HomeController::class,'update']);
+$router->get('/',[HomeController::class,'home']);
+$router->get('/showOne',[HomeController::class,'showOne']);
+$router->get('/test',[HomeController::class,'test']);
+$router->get('/add-form',[HomeController::class,'addPage']);
+$router->post('/add',[HomeController::class,'add']);
+$router->post('/delete',[HomeController::class,'delete']);
+$router->post('/update',[HomeController::class,'update']);
+
 try {
-    $router->resolve();
+    $router->route();
 } catch (Exception $e) {
 }

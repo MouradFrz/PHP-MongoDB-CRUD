@@ -24,7 +24,7 @@ class HomeController
             echo $e->getMessage();
         }
     }
-    public static function home()
+    public static function home(): void
     {
         $nsql = new NoSql();
         $collection = $nsql->usersCollection();

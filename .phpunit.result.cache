@@ -1,0 +1,1 @@
+{"version":1,"defects":{"ModelTest::does_this_equals_that":7,"ModelTest::second_test":7,"ModelTest::can_only_add_integers_to_number":7},"times":{"ModelTest::does_this_equals_that":0.004,"ModelTest::second_test":0,"ModelTest::can_only_add_integers_to_number":0.001}}

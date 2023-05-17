@@ -16,6 +16,7 @@
     "require": {
         "vlucas/phpdotenv": "^5.5",
         "mongodb/mongodb": "^1.12",
-        "squizlabs/php_codesniffer": "*"
+        "squizlabs/php_codesniffer": "*",
+        "phpunit/phpunit": "^10.1"
     }
 }
